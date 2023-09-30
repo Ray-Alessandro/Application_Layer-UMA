@@ -1,5 +1,6 @@
 {% extends 'cards-shops.html' %}
 
+
 {% block cards_products %}
 
 <div class="container-table-users">    
@@ -22,7 +23,7 @@
                         <div class="col-md-4">
                             <div class="card mb-4 rotate-card">
                                 <h5 class="card-title text-center my-4">{{ columna.1 }}</h5>
-                                <img src="https://www.entornoestudiantil.com/wp-content/uploads/2018/03/retail-carrito-compra.jpg" class="card-img-top" alt="Product Picture: {{ columna.1 }}">
+                                <img class="picture_product"src="{{ columna.4 }}" class="card-img-top" alt="Product Picture: {{ columna.1 }}">
                                 <p class="card-text text-center mt-3">{{ columna.2 }}</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item text-center">Precio: {{ columna.3 }}</li>
@@ -46,5 +47,13 @@
         </button>
     </div>
 </div>
+
+<style>
+    /* Aplica dimensiones fijas de 400px x 400px a la clase picture_product */
+    .picture_product {
+        width: 400px;
+        height: 400px;
+    }
+</style>
 
 {% endblock %}

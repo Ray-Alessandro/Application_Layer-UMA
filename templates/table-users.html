@@ -6,13 +6,26 @@
     <h1 class="text-center text-black mb-4">Lista de Usuarios</h1>
 
     <table class="table table-bordered">
-        {% for fila in matriz_usuarios %}
-        <tr>
-            {% for elemento in fila %}
-            <td>{{ elemento }}</td>
+        <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Nombres</th>
+                <th class="text-center">Apellidos</th>
+                <th class="text-center">Correo</th>
+                <th class="text-center">Numero de Telefono</th>
+                <th class="text-center">Credencial_ID</th>
+                <th class="text-center">Localidad_ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fila in matriz_usuarios %}
+            <tr>
+                {% for elemento in fila %}
+                <td class="text-center">{{ elemento }}</td>
+                {% endfor %}
+            </tr>
             {% endfor %}
-        </tr>
-        {% endfor %}
+        </tbody>
     </table>
 </div>
 {% endblock %}

@@ -22,7 +22,7 @@
                         <div class="col-md-4">
                             <div class="card mb-4 rotate-card">
                                 <h5 class="card-title text-center my-4">{{ columna.1 }}</h5>
-                                <img src="https://crehana-blog.imgix.net/media/filer_public/b8/67/b867d791-7bb6-4d5e-8618-6380fabfbf2a/interior-tienda_armays-com.jpg?auto=format&q=50" class="card-img-top" alt="Product Picture: {{ columna.1 }}">
+                                <img class= "picture_shop"src="{{ columna.4 }}" class="card-img-top" alt="Product Picture: {{ columna.1 }}">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item text-center"></li>
                                     <li class="list-group-item text-center">Telefono: {{ columna.2 }}</li>
@@ -47,5 +47,13 @@
         </button>
     </div>
 </div>
+
+<style>
+    /* Aplica dimensiones fijas de 400px x 400px a la clase picture_product */
+    .picture_shop {
+        width: 400px;
+        height: 400px;
+    }
+</style>
 
 {% endblock %}
